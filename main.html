@@ -5,18 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TO DO LIST</title>
     <link rel="stylesheet" href="main.css" />
+    <link type="text/javascript" href="main.js"
   </head>
   <body>
     <h1>What to do?</h1>
-    <div class="main">
-      <section class="top">
-        <input class="inputBox" type="text" /> <button>Add</button>
+    <div class="todoContainer">
+      <section class="inputwrap">
+        <input id="inputBox" type="text" placeholder=" 할 일을 입력하세요." />
+        <button type="button" id="addBtn" onclick="handleAdd">추가</button>
       </section>
-      <section class="bottom">
-        <ul>
-          <li>list1</li>
+      <section class="listwrap">
+        <ul id="todoList">
+          <!-- <li class="seclected">list1 <button>X</button></li>
+          <li>list3</li> -->
           <li>list2</li>
-          <li>list3</li>
+          <span>hi</span>
         </ul>
       </section>
     </div>

@@ -12,8 +12,9 @@ function addTask() {
     // span.innerHTML = "x";
     // li.appendChild(span);
     let button = document.createElement("button");
-    button.innerHTML = "x";
+    span.innerHTML = "\00d7";
     li.appendChild(button);
+    saveData();
   }
   inputBox.value = "";
 }
@@ -23,9 +24,20 @@ taskContainer.addEventListener(
   function (event) {
     if (event.target.tagName === "LI") {
       event.target.classList.toggle("checked");
+      saveData();
     } else if (event.target.tagName === "BUTTON") {
       event.target.parentElement.remove();
+      saveData();
     }
   },
   false
 );
+
+function saveData() {
+  localStorage.setItem("data", taskContainer.innerHTML);
+}
+
+function showTask() {
+  taskContainer.innerHTML = localStorage.getItem("data");
+}
+showTask();

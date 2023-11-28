@@ -75,6 +75,8 @@ ul li {
   cursor: pointer;
   user-select: none;
   position: relative;
+  display: flex;
+  justify-content: space-between;
 }
 
 ul li::before {
@@ -96,4 +98,17 @@ ul li.checked {
 }
 ul li.checked::before {
   background-image: url(img/checked.png);
+}
+
+ul li button {
+  width: 25px;
+  height: 25px;
+  border-style: none;
+  background-color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+ul li button:hover {
+  background-color: #f7afca;
 }

@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(pink 50%, navy 50%);
+  position: relative;
+}
+.todoApp {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  position: absolute;
+  top: 100px;
+  left: 25%;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px lightgray;
+}
+
+.todoApp img {
+  width: 30px;
+  height: 30px;
+}

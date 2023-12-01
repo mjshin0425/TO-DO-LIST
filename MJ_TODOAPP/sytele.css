@@ -74,18 +74,17 @@ li {
 }
 
 #listContainer {
-  box-shadow: inset 0 0 10px olive;
+  /* box-shadow: inset 0 0 10px olive; */
 }
 
 ul li {
-  box-shadow: inset 0 0 10px orange;
+  /* box-shadow: inset 0 0 10px olive; */
   position: relative;
   margin-bottom: 8px;
   padding-left: 24px;
 }
 
 ul li::before {
-  box-shadow: inset 0 0 10px red;
   content: "";
   position: absolute;
   width: 18px;
@@ -95,3 +94,17 @@ ul li::before {
   background-image: url(./image/unchecked.png);
   background-size: cover;
 }
+ul li.selected {
+  text-decoration: line-through;
+  color: grey;
+}
+
+ul li.selected::before {
+  background-image: url(./image/checkedblack.png);
+}
+
+/* ul li.deleteBtn {
+  border: 1px solid grey;
+  width: 18px;
+  height: 18px;
+} */

@@ -10,12 +10,18 @@
     <div class="container">
       <div class="todoApp">
         <h2><img src="./image/pencil.png" /> What To Do?</h2>
-        <input type="text" placeholder="오늘의 할 일은?" />
-        <button type="button">추가</button>
-        <ul>
-          task 1
+        <section class="inputWrap">
+          <input id="inputText" type="text" placeholder="오늘의 할 일은?" />
+          <button id="addBtn" type="button">추가</button>
+        </section>
+
+        <ul id="listContainer">
+          <li class="selected">task 1</li>
+          <li>task 2</li>
+          <li>task 3</li>
         </ul>
       </div>
     </div>
+    <script type="text/javascript" src="./app.js"></script>
   </body>
 </html>

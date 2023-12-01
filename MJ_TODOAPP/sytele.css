@@ -2,12 +2,18 @@
   margin: 0;
   padding: 0;
 }
+ul,
+li {
+  list-style: none;
+}
+
 .container {
   width: 100%;
   height: 100vh;
   background: linear-gradient(pink 50%, navy 50%);
   position: relative;
 }
+
 .todoApp {
   width: 100%;
   max-width: 400px;
@@ -18,10 +24,74 @@
   padding: 30px;
   background-color: #fff;
   border-radius: 10px;
-  box-shadow: 2px 2px 2px lightgray;
+  box-shadow: 2px 2px 2px rgb(195, 194, 194);
+}
+
+.todoApp h2 {
+  padding-bottom: 6px;
+  font-size: 24px;
+  color: rgb(92, 18, 161);
+  text-align: center;
+  justify-content: center;
 }
 
 .todoApp img {
   width: 30px;
   height: 30px;
+  justify-content: center;
+}
+.inputWrap {
+  /* box-shadow: inset 0 0 10px orange; */
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  box-shadow: 0 1px 1px 1px rgb(191, 190, 190);
+  background-color: rgb(232, 231, 230);
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.inputWrap input {
+  border: none;
+  display: flex;
+  width: 90%;
+  margin-left: 10px;
+  background-color: transparent;
+}
+
+.inputWrap input:focus {
+  outline: none;
+}
+
+.inputWrap #addBtn {
+  width: 45px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  background-color: palevioletred;
+  font: 14px;
+  color: navy;
+}
+
+#listContainer {
+  box-shadow: inset 0 0 10px olive;
+}
+
+ul li {
+  box-shadow: inset 0 0 10px orange;
+  position: relative;
+  margin-bottom: 8px;
+  padding-left: 24px;
+}
+
+ul li::before {
+  box-shadow: inset 0 0 10px red;
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 2px;
+  left: 2px;
+  background-image: url(./image/unchecked.png);
+  background-size: cover;
 }

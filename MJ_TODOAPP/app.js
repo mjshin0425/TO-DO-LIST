@@ -9,6 +9,9 @@ function addTask() {
     const listContents = document.getElementById("listContainer");
     list.innerHTML = inputText.value;
     listContents.appendChild(list);
+    let span = document.createElement("span");
+    span.innerHTML = "";
+    list.appendChild(span);
     inputText.value = "";
   }
 }

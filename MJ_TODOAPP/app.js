@@ -11,10 +11,15 @@ function addTask() {
     list.innerHTML = inputText.value;
     listContents.appendChild(list);
 
-    const span = document.createElement("span");
-    span.innerHTML = "";
-    list.appendChild(span);
-    span.classList = "deleteBtn";
+    const updatespan = document.createElement("span");
+    updatespan.innerHTML = "Update";
+    list.appendChild(updatespan);
+    updatespan.classList = "updateBtn";
+
+    const deletespan = document.createElement("span");
+    deletespan.innerHTML = "delete";
+    list.appendChild(deletespan);
+    deletespan.classList = "deleteBtn";
     // const delBtn = document.querySelector("deleteBtn");
     // delBtn.addEventListener("click", deleteTask);
 

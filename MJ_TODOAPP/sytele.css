@@ -127,4 +127,5 @@ ul li span {
 
 ul li span:hover {
   background-color: rgb(252, 98, 175);
+  transition: all 1s;
 }

@@ -1,27 +1,34 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 ul,
 li {
   list-style: none;
 }
+/* button {
+  all: unset;
+} */
 
 .container {
   width: 100%;
   height: 100vh;
   background: linear-gradient(pink 50%, navy 50%);
-  position: relative;
+  padding: 10px;
+  display: flex;
+
+  /* position: relative; */
 }
 
 .todoApp {
   width: 100%;
   max-width: 400px;
-  margin: auto;
-  position: absolute;
+  margin: 100px auto;
+  /* position: absolute;
   top: 100px;
-  left: 25%;
-  padding: 30px;
+  left: 25%; */
+  padding: 50px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 2px 2px 2px rgb(195, 194, 194);
@@ -77,27 +84,8 @@ li {
   cursor: pointer;
 }
 
-/* #listContainer {
+#listContainer {
   box-shadow: inset 0 0 10px olive;
-} */
-
-ul li {
-  box-shadow: inset 0 0 5px orange;
-  position: relative;
-  margin-bottom: 8px;
-  padding-left: 24px;
-  display: flex;
-  /* justify-content: end; */
-  cursor: pointer;
-  vertical-align: middle;
-}
-
-ul li span {
-  /* box-shadow: inset 0 0 10px olive; */
-  display: flex;
-
-  justify-content: right;
-  /* flex: 1; */
 }
 
 ul li::before {
@@ -120,28 +108,30 @@ ul li.selected::before {
   background-image: url(./image/checkedblack.png);
 }
 
-/* ul li.deleteBtn {
-  border: 1px solid grey;
-  width: 18px;
-  height: 18px;
-} */
-
-ul li.deleteBtn {
-  /* box-shadow: inset 0 0 10px orange; */
+ul li {
+  box-shadow: inset 0 0 5px orange;
+  position: relative;
+  margin-bottom: 8px;
+  padding-left: 24px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+ul li input {
+  display: flex;
+  flex-grow: 1;
+  outline: none;
+  border: 0;
+  background-color: transparent;
+}
+ul li.span {
+  border: 2px solid red;
   width: 20px;
   height: 20px;
-  display: flex;
-  justify-content: center;
   border-radius: 50%;
   cursor: pointer;
-  background-image: url(./image/x-mark.png);
-  background-size: cover;
 }
-
-ul li span:hover {
+/* ul li span:hover {
   background-color: rgb(252, 98, 175);
   transition: all 1s;
-}
-
-/* ul li.updateBtn {
 } */

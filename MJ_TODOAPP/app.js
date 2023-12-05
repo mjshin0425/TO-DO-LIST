@@ -16,12 +16,13 @@ function addTask() {
     // list.appendChild(updatespan);
     // updatespan.classList = "updateBtn";
 
-    // const deletespan = document.createElement("span");
-    // deletespan.innerHTML = "delete";
-    // list.appendChild(deletespan);
-    // deletespan.classList = "deleteBtn";
-    // const delBtn = document.querySelector("deleteBtn");
-    // delBtn.addEventListener("click", deleteTask);
+    // delete button
+    const deletespan = document.createElement("span");
+    deletespan.innerHTML = "DEL";
+    list.appendChild(deletespan);
+    deletespan.classList = "deleteBtn";
+    const delBtn = document.getElementById("deleteBtn");
+    delBtn.addEventListener("click", deleteTask);
 
     inputText.value = "";
   }

@@ -19,13 +19,16 @@ function addTask() {
     listContents.appendChild(list);
     list.appendChild(textbox);
 
-    // const listInputEl = document.createElement("INPUT");
-    // listInputEl.id = "listInput";
-    // listInputEl.setAttribute("readonly", "readonly");
-    // listInputEl.textContent = inputText.value; //에러다 에러
+    //////////////// 건드리지 마!!!!
+    //const listInputEl = document.createElement("INPUT");
+    //listInputEl.id = "listInput";
+    //listInputEl.setAttribute("readonly", "readonly");
+    //listInputEl.value = inputText.value; //에러다 에러
     // console.log(inputText.value);
     // console.log(listInputEl.textContent);
     // list.appendChild(listInputEl);
+
+    // button div 생성
 
     // edit button
     const editspan = document.createElement("span");
@@ -43,7 +46,6 @@ function addTask() {
     deletespan.id = "deleteBtn";
     deletespan.type = "button";
     const delBtn = document.getElementById("deleteBtn");
-    // delBtn.addEventListener("click", deleteTask);
 
     inputText.value = "";
   }
@@ -55,22 +57,26 @@ function handleTask(event) {
   if (event.target.tagName === "LI") {
     event.target.classList.toggle("selected");
   } else if (event.target.className === "deleteBtn") {
-    event.target.parentElement.remove();
+    event.target.parentElement.remove(); // 부모요소가 div로 바뀌어서 코드도 바꿔야 함.li 삭제
   } else if (event.target.className === "editBtn") {
+    // li에 input 생성
+    const listContents = document.getElementById("listContainer"); //
     const list = document.createElement("LI");
     const listEditInput = document.createElement("INPUT");
-    list.appendChild(listEditInput); // input을 li에 넣음
-    listEditInput.classList = "editInput";
-    listEditInput.innerHTML = list.innerHTML; // 클릭한 li의 text 내용을 input에 옮기기
-    const listContents = document.getElementById("listContainer"); //
-    listContents.appendChild(list);
+    listEditInput.type = "text";
+    listEditInput.id = "editInput";
 
-    // const list = document.createElement("LI");
-    // const listUpdate = document.createElement("INPUT");
-    // const listContents = document.getElementById("listContainer");
-    // list.appendChild(listUpdate);
-    // listContents.appendChild(list);
+    // 노드를 넣음
+    listContents.appendChild(list);
+    list.appendChild(listEditInput); // input을 li에 넣음
+
+    listInputEl.removeAttribute("readonly");
+    listEditInput.innerHTML = list.innerHTML; // 클릭한 li의 text 내용을 input에 옮기기
   }
 }
+
+// function handleTask 를 쪼개서 더 작은 단위로 이벤트 리스너를 건다
+// li 리스너는 checked 토글,
+// button div..
 
 listContainer.addEventListener("click", handleTask);
